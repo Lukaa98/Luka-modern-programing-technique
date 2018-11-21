@@ -1,29 +1,26 @@
-public class Apple extends Fruit {
-// data field
-String name;
-// toString() method.
-@Override
-public String toString() {
-return "Apple [name=" + super.name + "]";
-}
-// getApplePieRecipe(): String
-String getApplePieRecipe()
-{
-return super.name;
-}
-@Override
-public int hashCode() {
-final int prime = 31;
-int result = super.hashCode();
-result = prime * result + ((name == null) ? 0 : name.hashCode());
-return result;
-}
-public boolean equals(Apple other) {
-if (name == null) {
-if (other.name != null)
-return false;
-} else if (!name.equals(other.name))
-return false;
-return true;
-}
+import java.util.Objects;
+public class Apple extends Fruit{
+//data field
+//toString() method.
+ @Override
+ public String toString() {
+ return "Apple [name=" + super.name + "]";
+                          }
+//getApplePieRecipe(): String
+  String getApplePieRecipe(){
+  return super.name;
+                            }
+   public boolean equals(Object o){
+   if(o instanceof Apple)
+                                  {
+  Apple other=(Apple)o;
+  if(other.name.equals(this.name)) {
+     return true;
+                                   }
+                                  }
+   return false;
+                                  }
+   public int hashcode(){
+      return Objects.hashCode(this.name);
+                        }
 }

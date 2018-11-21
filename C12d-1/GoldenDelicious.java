@@ -1,16 +1,16 @@
 import java.util.Objects;
-public final class McIntosh extends Apple{
+public final class GoldenDelicious extends Apple{
 //data field
 //toString() method.
 @Override
 public String toString() {
-return "McIntosh [name=" + super.name + "]";
+return "GoldenDelicious [name=" + super.name + "]";
 }
 public boolean equals(Object o)
 {
-if(o instanceof McIntosh)
+if(o instanceof GoldenDelicious)
 {
-McIntosh other=(McIntosh)o;
+GoldenDelicious other=(GoldenDelicious)o;
 if(other.name.equals(this.name))
 {
 return true;
