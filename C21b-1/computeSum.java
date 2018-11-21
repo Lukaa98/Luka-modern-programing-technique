@@ -5,8 +5,7 @@ import java.text.*;
 public class ComputeSum{
   public static void main(String [] args)
   {
-    try
-    {
+
       DecimalFormat df= new DecimalFormat("##.##");
 
       System.out.print("enter the value of i " );
@@ -22,10 +21,9 @@ public class ComputeSum{
       }
       double sum = computeSum(num);
       System.out.print("the sum is "+ df.format(sum));
-    }
-    catch(Exception e)
+
     {
-      System.out.print("Exception had found. program exis");
+      System.out.print(" number had found. program exis");
       System.exit(0);
     }
   }
